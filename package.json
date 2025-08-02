@@ -13,7 +13,8 @@
   "scripts": {
     "deploy": "npm run build && wrangler pages deploy",
     "build": "remix vite:build",
-    "dev": "node pre-start.cjs  && remix vite:dev",
+    "dev": "node pre-start.cjs && remix vite:dev --host 0.0.0.0 --port 5173",
+    "dev:cloud": "node pre-start.cjs && remix vite:dev --host 0.0.0.0 --port 5173 --mode production",
     "test": "vitest --run",
     "test:watch": "vitest",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint app",
