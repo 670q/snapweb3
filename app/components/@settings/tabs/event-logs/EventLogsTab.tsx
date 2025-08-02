@@ -512,7 +512,7 @@ export function EventLogsTab() {
       // Add subtitle with bolt.diy
       doc.setFontSize(12);
       doc.setFont('helvetica', 'normal');
-      doc.text('snap web - AI Development Platform', margin, 45);
+      doc.text('bolt.diy - AI Development Platform', margin, 45);
       yPos = 70;
 
       // Add report summary section
