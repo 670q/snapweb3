@@ -51,10 +51,7 @@ const inlineThemeCode = stripIndents`
       theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
 
-    // Ensure theme is applied immediately
     document.querySelector('html')?.setAttribute('data-theme', theme);
-    document.documentElement.style.setProperty('--bolt-elements-bg-depth-1', 
-      theme === 'dark' ? '#0A0A0A' : '#FFFFFF');
   }
 `;
 
@@ -73,9 +70,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     document.querySelector('html')?.setAttribute('data-theme', theme);
-
-    // Ensure background color is applied immediately
-    document.documentElement.style.setProperty('--bolt-elements-bg-depth-1', theme === 'dark' ? '#0A0A0A' : '#FFFFFF');
   }, [theme]);
 
   return (
